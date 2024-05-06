@@ -1,0 +1,16 @@
+
+{% extends 'staff/staff_base.html' %}
+{% block content %}
+
+
+<title>Add Room</title>
+
+
+<h2>Add room</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ room_form.as_p }}
+    <button type="submit">Add Room</button>
+</form>
+
+{% endblock %}

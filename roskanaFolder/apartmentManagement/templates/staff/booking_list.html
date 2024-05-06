@@ -1,0 +1,35 @@
+{% extends 'staff/staff_base.html' %}
+{% load static %}
+{% block content %}
+
+
+<h1>Booking List</h1>
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Room</th>
+            <th>Room Number</th>
+            <th>Room Fee</th>
+            <th>Date Booked</th>
+            <th>Payment Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.user }}</td>
+            <td>{{ booking.room }}</td>
+            <td>{{ booking.room_number }}</td>
+            <td>{{ booking.room_fee }}</td>
+            <td>{{ booking.date_booked }}</td>
+            <td>{{ booking.payment_status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+{% endblock %}
+

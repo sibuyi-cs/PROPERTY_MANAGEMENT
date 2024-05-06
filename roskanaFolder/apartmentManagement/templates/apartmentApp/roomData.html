@@ -1,0 +1,56 @@
+{% extends 'apartmentApp/base.html' %}
+{% block content %}
+
+
+
+
+<div class="openViewRoom">
+    <div class="imageCover">
+        <img src="{{ room.room_image.url }}" alt="">
+    </div>
+    <div class="details">
+        <h2 style="text-align: center; padding: 10px;">{{ room.property.property_name }}</h2>
+        <div class="roomdata">
+            <div class="bedrooms">
+                <span><ion-icon name="bed-outline"></ion-icon></span>
+                <h3>{{ room.property_num_bed_Rooms }} bedrooms</h3>
+            </div>
+            <div class="bathrooms">
+                <span><ion-icon name="water-outline"></ion-icon></span>
+                <h3>{{ room.number_of_bathrooms }} bathrooms</h3>
+            </div>
+            <div class="roomates">
+                <span><ion-icon name="person-outline"></ion-icon></span>
+                <h3>{{ room.property_numPeopleCurrent }} Roommates</h3>
+            </div>
+            <!-- Add other room details as needed -->
+        </div>
+        <h3>Room Type: {{ room.room_type }}</h3>
+        <h3>Available: {% if room.is_available %}Yes{% else %}No{% endif %}</h3>
+        <h3>Rent: R{{ room.rent_fee }}</h3>
+
+        <h3 style="text-decoration: underline; padding-top: 5px;">Property amenities</h3>
+        <div class="service">
+            <!-- Loop through property amenities -->
+            {% for facility in room.facilities.all %}
+                <h3>{{ facility.name }}</h3>
+            {% endfor %}
+        </div>
+
+        <div class="room_features">
+            <h3 style="margin-top: 10px;">Room features</h3>
+            <!-- Add room features here -->
+        </div>
+        <div class="">
+            <h3><a href="{% url 'apartName:book_room' room.id %}" class="bookR" >Book Room</a></h3>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}

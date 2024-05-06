@@ -1,0 +1,50 @@
+{% extends 'apartmentApp/base.html' %}
+{% block content %}
+<div class="apartment-details">
+    <div class="left-column">
+        <h1 style="
+        text-align: center;
+        padding-top: 5px;
+        ">{{ apartment.property_name }}</h1>
+        <img src="{{ apartment.property_image.url }}" alt="{{ apartment.property_name }}">
+
+    </div>
+    <div class="right-column">
+        <p><strong>Address:</strong> {{ apartment.address }}, {{ apartment.city }}, {{ apartment.state }}, {{ apartment.country }}, {{ apartment.zipcode }}</p>
+        <p><strong>Description:</strong> {{ apartment.description }}</p>
+    </div>
+</div>
+
+<div class="room-list">
+    <h2 style="
+    background-color: rgba(71, 77, 77, 0.456);
+    text-align: center;
+    margin-bottom: 5px;
+    ">Rooms</h2>
+    <ul>
+        {% for room in rooms %}
+        <li>
+            <img src="{{ room.room_image.url }}" alt="{{ room.property.property_name }}">
+
+            <div class="dataR">
+                <div class="n1">
+                    <p><strong>Room Number:</strong> {{ room.room_number }}</p>
+                    <p><strong>Room Type:</strong> {{ room.room_type }}</p>
+                </div>
+                <div class="n1">
+                    <p><strong>Occupancy:</strong> {{ room.occupancy }}</p>
+                    <p><strong>Bed Type:</strong> {{ room.bed_type }}</p>
+                </div>
+                <div class="n1">
+                    <p><strong>Rent Fee:</strong> {{ room.rent_fee }}</p>
+                </div>
+            </div>
+
+           
+            
+            <!-- Add other room details as needed -->
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

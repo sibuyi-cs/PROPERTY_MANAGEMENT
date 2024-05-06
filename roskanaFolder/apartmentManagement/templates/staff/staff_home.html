@@ -1,0 +1,42 @@
+{% extends 'staff/staff_base.html' %}
+{% block content %}
+    <div class="grid-container1">
+        {% for apartment in apartments %}
+        <div class="grid-item1">
+            <a href="{% url 'apartName:apartment_detail' apartment.id %}">
+            <img src="{{ apartment.property_image.url }}" alt="{{ apartment.property_name }}"></a>
+            
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="search">
+        <h1 style="text-align: center;
+        font-size: 50px;
+        ">You need a room? <i>we got your back.</i></h1>
+        
+    </div>
+
+
+
+    <div class="grid-container">
+        {% for room in rooms %}
+        <div class="grid-item">
+            <img class="image_grid_item" src="{{ room.room_image.url }}" alt="{{ room.property.property_name }}">
+    
+            <div class="viewShow">
+                <div class="viewRoom">
+                    <a href="{% url 'apartName:room_detail' room.id %}">
+                        <h4>View Room</h4>
+                        <span><ion-icon name="eye-outline"></ion-icon></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
+

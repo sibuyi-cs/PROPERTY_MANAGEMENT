@@ -1,0 +1,46 @@
+{% extends 'apartmentApp/base.html' %}
+{% block content %}
+
+<div class="cont">
+    <h1>User Profile</h1>
+    <p><strong>Username:</strong> {{ profile.user.username }}</p>
+
+    <p><strong>Avatar:</strong> 
+        {% if user.profile.avatar %}
+        <img src="{{ user.profile.avatar.url }}" alt="Avatar" style="height: 100px; width: auto;">
+        {% else %}
+        <span><ion-icon name="person-outline"></ion-icon></span>
+        {% endif %}
+    </p>
+    <p><strong>Bio:</strong> {{ profile.bio }}</p>
+    <p><strong>Date Account Created:</strong> {{ profile.date_account_created }}</p>
+    <p><strong>Phone:</strong> {{ profile.phone }}</p>
+    <p><strong>City:</strong> {{ profile.city }}</p>
+    <p><strong>State:</strong> {{ profile.state }}</p>
+    <p><strong>ZIP Code:</strong> {{ profile.zipcode }}</p>
+    <p><strong>Country:</strong> {{ profile.country }}</p>
+
+    {% if booked_room %}
+    <div class="booked-room">
+        <h2>Booked Room</h2>
+        <p><strong>Room Number:</strong> {{ booked_room.room_number }}</p>
+        <p><strong>Rent Fee:</strong> R{{ booked_room.room_fee }}</p>
+        <p><strong>Date Booked:</strong> {{ booked_room.date_booked }}</p>
+        <p><strong>Payment Status:</strong> {{ booked_room.payment_status }}</p>
+    </div>
+    {% else %}
+    <div class="booked-room">
+        <h2>Booked Room</h2>
+        <p><strong>Room Number:</strong> none</p>
+        <p><strong>Rent Fee:</strong> none</p>
+        <p><strong>Date Booked:</strong> none</p>
+        <p><strong>Payment Status:</strong> none</p>
+    </div>
+
+    {% endif %}
+</div>
+
+
+
+
+{% endblock %}

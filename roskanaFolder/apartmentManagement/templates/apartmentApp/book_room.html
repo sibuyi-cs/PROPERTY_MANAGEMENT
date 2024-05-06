@@ -1,0 +1,22 @@
+{% extends 'apartmentApp/base.html' %}
+{% block content %}
+
+<div class="" style="display: flex; align-items: center; justify-content: center;">
+<div class="">
+    <h1>Book Room</h1>
+    <img src="{{ room.room_image.url }}" alt="" style="max-height: 220px; width: auto;">
+    
+    <h3>Room Number: {{ room.room_number }}</h3>
+    <h3>Rent Fee: R{{ room.rent_fee }}</h3>
+</div>
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Book Now</button>
+</form>
+
+
+{% endblock %}

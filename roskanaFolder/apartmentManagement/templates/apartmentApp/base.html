@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="{% static 'css/style.css'%}">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">ROSKANA</div>
+
+
+        <ul class="nav">
+            <a href="{% url 'apartName:home' %}">Home</a>
+            <a href="#">Book Room</a>
+            <a href="#">Contact us</a>
+            <a href="#">About</a>
+
+            {% if user.is_authenticated %}
+            {% else %}
+                <a href="{% url 'apartName:login' %}">Login</a>
+                <a href="{% url 'apartName:register' %}">Register</a>
+            {% endif %}
+
+        </ul>
+
+
+        {% if user.is_authenticated %}
+        <div class="user">
+                <div class="image">
+                    {% if user.profile.avatar %}
+                    <img src="{{ user.profile.avatar.url }}" alt="Avatar">
+                    {% else %}
+                    <span><ion-icon name="person-outline"></ion-icon></span>
+                    {% endif %}
+                </div>
+            
+            </div>
+
+            <div class="dropdown">
+
+                <div class="profile">
+                
+                    <button class="dropbtn" onclick="toggleDropdown()">{{ user.username }}</button>
+                </div>
+                
+                <div class="dropdown_content" id="myDropdown">
+                    <a href="{% url 'apartName:profile' %}"><span class="icon-user"><ion-icon name="person-circle-outline"></ion-icon></span>View Profile</a>
+                    <a href="{% url 'apartName:add_profile' %}"><span><ion-icon name="person-add-outline"></ion-icon></span>Add profile</a> 
+                    <a href="{% url 'apartName:edit_profile' %}"><span><ion-icon name="construct-outline"></ion-icon></span>Edit profile</a>                
+                    <a href="{% url 'apartName:logout' %}"><span><ion-icon name="log-out-outline"></ion-icon></span>Logout</a>
+                </div>
+            </div>
+        
+        {% endif %}
+
+
+    </div>
+    
+
+    {% block content %}
+    {% endblock %}
+
+
+
+    
+    <div class="footer">
+        <div class="about">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur dignissimos dolore temporibus aliquid deleniti, similique illo fugit? Ut aliquam laboriosam tempore quasi sed doloremque odio exercitationem facere reprehenderit ex!</p>
+
+        </div>
+        <div class="contacts">
+            <div class="num1">
+                <span><ion-icon name="home-outline"></ion-icon></span>
+                <h4>san acadia street,pretoria,south africa</h4>
+            </div>
+            <div class="num1">
+                <span><ion-icon name="mail-outline"></ion-icon></span>
+                <h4>roskanainfo@gmail.com</h4>
+            </div>
+            <div class="num1">
+                <span><ion-icon name="call-outline"></ion-icon></span>
+                <h4>+012-456-8798</h4>
+            </div>
+
+        </div>
+        <div class="copyrite">
+
+        </div>
+    </div>
+
+
+    <div class="statubar">
+        <h5>Copyright 2023 | Rent A Room. All Rights Reserved.</h5>
+        <a href="#">Home</a>
+        <a href="#">Book Room</a>
+        <a href="#">Contact us</a>
+        <a href="#">About</a>
+    </div>
+
+</body>
+<script src="{% static 'js/javascript.js' %}"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
+
+
+
+
+
+
+

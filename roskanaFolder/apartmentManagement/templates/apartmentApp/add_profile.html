@@ -1,0 +1,16 @@
+{% extends 'apartmentApp/base.html' %}
+
+{% block title %}
+<title>Add Profile</title>
+{% endblock %}
+
+{% block content %}
+
+<h1>Add Profile for {{ username }}</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Profile</button>
+</form>
+
+{% endblock %}

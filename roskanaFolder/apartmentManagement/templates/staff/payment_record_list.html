@@ -1,0 +1,34 @@
+{% extends 'staff/staff_base.html' %}
+{% block content %}
+
+    <div class="">
+        <a href="{% url 'apartName:pay_all_user' %}">Deduct Payment</a>
+    </div>
+
+    <h1>Payment Record List</h1>
+    {% if payment_records %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Account</th>
+                    <th>Amount</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for payment_record in payment_records %}
+                <tr>
+                    <td>{{ payment_record.account }}</td>
+                    <td>{{ payment_record.amount }}</td>
+                    <td>{{ payment_record.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No payment records found.</p>
+    {% endif %}
+    
+
+{% endblock %}
+

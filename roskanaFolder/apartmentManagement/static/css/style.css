@@ -1,0 +1,632 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+
+}
+.header{
+    background: rgb(28, 28, 83);
+    height: 50px;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+
+}
+.username{
+    display: flex;
+    align-content:center;
+    margin-top: 15px;
+
+}
+.user{
+    display: flex;
+    align-content:center;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.nav a{
+    text-decoration: none;
+    margin-right: 50px;
+    color: white;
+    margin-left: auto;
+}
+.nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.image{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(6, 190, 70);
+    overflow: hidden;
+}
+
+
+.search{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(39, 41, 39, 0.459);
+}
+
+.display img{
+    width: 500px;
+    height: 300px;
+    
+
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+.display{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background: rgba(128, 128, 128, 0.404);
+
+}
+.data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3{
+    margin-left:5px;
+}
+.price input[type="number"]{
+    width: 50px;
+    
+}
+.min{
+    margin-top: 5px;
+    width: ;
+}
+.max{
+    margin-top: 5px;
+}
+
+.grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.room{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+
+.footer{
+    display: flex;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    height: 100px;
+    justify-content: center;
+    background-color:rgba(128, 128, 128, 0.646);
+
+}
+.about{
+    width: 20%;
+}
+
+.about p{
+    text-align: start;
+
+}
+.num1{
+    display: flex;
+}
+.num1 h4{
+    margin-left: 7px;
+}
+
+
+.statubar{
+    display: flex;
+    justify-content: center;
+    background-color:rgba(128, 128, 128, 0.646);
+}
+.statubar a{
+    text-decoration: underline;
+    margin-left: 10px;
+    display: flex;
+    color:black;
+
+}
+
+
+.viewRoom{
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background: red;
+}
+.viewShow{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    color: black;
+}
+
+
+.viewRoom span{
+    margin-left: 5px;
+    font-size:20px;
+    margin-top: 5px;
+    color: black;
+}
+
+.viewRoom{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.244);
+    backdrop-filter: blur(10px);
+    display: none;
+    z-index: 5;
+}
+
+
+
+
+.opemViewRoom{
+
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+.bookBtn{
+
+    margin-top: 20px;
+    padding:10px ;
+    margin-left: 5px;
+
+}
+.details{
+    padding-left: 20px;
+}
+.bedrooms,.roomates,.bathrooms,.kitchen{
+    font-size: 30px;
+    text-align: center;
+}
+.bedrooms,.roomates,.bathrooms,.kitchen{
+    font-size: 20px;
+    border:2px solid green;
+    margin-right: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.bedrooms,.roomates,.bathrooms,.kitchen,h3{
+    font-size: 20px;
+    font-weight: 100;
+}
+.roomdata{
+    display: flex;
+    width: fit-content;
+    margin-left: 5px;
+}
+
+.imageCover img{
+    width: 650px;
+    padding: 5px;
+
+}
+.opemViewRoom{
+    position: absolute;
+    left: 200px;
+    right: 200px;
+
+}
+.service h3{
+    border: 1px solid rgb(0, 0, 0);
+    width: fit-content;
+    padding: 3px;
+    margin-top: 5px;
+    font-weight: 100;
+
+}
+
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 1px; /* Gap between grid items */
+}
+
+.grid-item1 {
+    padding: 2px; /* Padding inside grid items */
+    overflow: hidden;
+    
+}
+.grid-item1 img:hover {
+    cursor: pointer;
+    border-radius: 50px; 
+    background-color: black;   
+}
+
+
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 1px; /* Gap between grid items */
+}
+
+.grid-item {
+    padding: 2px; /* Padding inside grid items */
+    overflow: hidden;
+    
+}
+
+img {
+    width: 100%; /* Set image width to 100% of container */
+    height: 100%; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure images don't exceed container width */
+    max-height: 400px; /* Set maximum height for all images */
+}
+
+.viewRoom a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+.viewRoom a:hover{
+    text-decoration: underline;
+
+}
+
+
+/* styles.css */
+
+/* Style for apartment details */
+.apartment-details {
+    margin-bottom: 20px;
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Wrap items to the next line if needed */
+}
+
+.apartment-details .left-column {
+    flex: 1; /* Take up 50% of the available space */
+    margin-right: 20px; /* Add spacing between columns */
+    overflow: hidden;
+}
+
+.apartment-details .right-column {
+    flex: 1; /* Take up 50% of the available space */
+    text-align: justify;
+    padding-top: 5px;
+}
+
+.apartment-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.apartment-details img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    max-height: 100%; /* Ensure image maintains aspect ratio */
+    margin-bottom: 10px;
+}
+
+.apartment-details p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+.room-list ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 1px; /* Gap between grid items */
+}
+
+.room-list li {
+    padding: 1px;
+    text-align: center; /* Center align text within grid items */
+}
+
+.room-list img {
+    width: 100%; /* Set image width to 100% of container */
+    height: 100%; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure images don't exceed container width */
+    max-height: 400px; /* Set maximum height for all images */
+}
+
+.room-list p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.dataR{
+    display: flex;
+    justify-content: center;
+}
+
+.n1{
+
+    text-align: left;
+    padding: 5px;
+    background: rgba(9, 31, 122, 0.694);
+    margin: 5px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+
+}
+
+
+
+
+
+/* styles.css */
+
+/* Style for login form */
+form {
+    width: 300px; /* Set the width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 10px; /* Add spacing below each label */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Set input fields to fill their container */
+    padding: 10px; /* Add padding to input fields */
+    margin-bottom: 20px; /* Add spacing below each input field */
+    border: 1px solid #ccc; /* Add border to input fields */
+    border-radius: 5px; /* Add border radius to input fields */
+    box-sizing: border-box; /* Include padding and border in the input's total width */
+}
+
+button[type="submit"] {
+    width: 100%; /* Set button width to fill its container */
+    padding: 10px; /* Add padding to the button */
+    background-color: #007bff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius to button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darken button background color on hover */
+}
+
+
+
+
+/* styles.css */
+
+/* Style for registration form */
+form {
+    width: 300px; /* Set the width of the form */
+    margin: 0 auto; /* Center the form horizontally */
+    border: 1px solid rgba(52, 48, 48, 0.585);
+    padding: 25px;
+    background: rgba(25, 24, 46, 0.486);
+    backdrop-filter: blur(50px);
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 10px; /* Add spacing below each label */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Set input fields to fill their container */
+    padding: 10px; /* Add padding to input fields */
+    margin-bottom: 20px; /* Add spacing below each input field */
+    border: 1px solid #ccc; /* Add border to input fields */
+    border-radius: 5px; /* Add border radius to input fields */
+    box-sizing: border-box; /* Include padding and border in the input's total width */
+}
+
+button[type="submit"] {
+    width: 100%; /* Set button width to fill its container */
+    padding: 10px; /* Add padding to the button */
+    background-color: #007bff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius to button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darken button background color on hover */
+}
+
+
+.openViewRoom{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+    margin-right: 0px;
+    
+}
+
+/* Style for dropdown button */
+.dropdown .dropbtn {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+}
+.dropbtn{
+    margin-top: 6px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Style for dropdown content */
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: -100px;
+
+}
+
+/* Style for dropdown content links */
+.dropdown_content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Style for dropdown content links on hover */
+.dropdown_content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown content when clicked */
+.show {
+    display: block;
+}
+
+
+.profile{
+    display: flex;
+    align-items:center;
+}
+
+
+.icon-user{
+    width: 0px;
+    height: 20px;
+}
+.username:hover{
+    cursor: pointer;
+}
+.bookR{
+    text-decoration: none;
+    border: 2px solid black;
+    margin-top: 5px;
+    color: black;
+}
+
+
+
+.cont {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    
+    
+}
+
+/* Main heading inside .container */
+.cont h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+.cont p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Strong element styles */
+.cont strong {
+    font-weight: bold;
+}
+
+/* Avatar image inside .container */
+.cont img {
+    max-height: 100px;
+    width: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+
+.admin_header{
+    background: gray;
+    padding: 20px;
+
+}
+.admin_header a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    margin-right: 20px;
+
+}
+.admin_header a:hover{
+    color: white;
+}
